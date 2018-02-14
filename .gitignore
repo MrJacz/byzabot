@@ -57,3 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# Custom
+config.json
+src/bwd
+package-lock.json
+

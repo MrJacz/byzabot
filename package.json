@@ -1,0 +1,36 @@
+{
+  "name": "byzabot",
+  "version": "0.0.1",
+  "description": "A discord bot for Byza's discord server",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrJacz/byzabot.git"
+  },
+  "keywords": [
+    "Discord",
+    "Discord",
+    "Bot",
+    "Discord.js",
+    "Discord.js",
+    "bot"
+  ],
+  "author": "Jacz <jacz@jaczaus.me> (jaczaus.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MrJacz/byzabot/issues"
+  },
+  "homepage": "https://github.com/MrJacz/byzabot#readme",
+  "dependencies": {
+    "discord.js": "github:discordjs/discord.js",
+    "klasa": "github:dirigeants/klasa"
+  },
+  "devDependencies": {
+    "eslint": "^4.17.0",
+    "eslint-plugin-node": "^6.0.0",
+    "eslint-plugin-promise": "^3.6.0"
+  }
+}
