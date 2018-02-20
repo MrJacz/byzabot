@@ -26,7 +26,8 @@
   "homepage": "https://github.com/MrJacz/byzabot#readme",
   "dependencies": {
     "discord.js": "github:discordjs/discord.js",
-    "klasa": "github:dirigeants/klasa"
+    "klasa": "github:dirigeants/klasa",
+    "twit": "^2.2.9"
   },
   "devDependencies": {
     "eslint": "^4.17.0",
