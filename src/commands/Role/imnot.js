@@ -12,31 +12,15 @@ module.exports = class extends Command {
             usage: "<Role:string>",
             extendedHelp: "No extended help available."
         });
-
-        this.regions = [
-            "305723700303626241",
-            "305723674529366038",
-            "305723939697721348",
-            "305723954633506817",
-            "305723724412354561",
-            "414262667801395210",
-            "226735941069307906"
-        ];
     }
 
     async run(msg, [role]) {
         role = this.getRole(role);
         if (!role) throw "The provided role doesn't match.";
-        if (msg.member.roles.has(role.id)) {
-            if (role.id === "226735941069307906") throw "You cannot remove DaPlaya";
-            await msg.member.roles.remove(role.id);
-            return msg.send(`Sucessfully removed ${role.name} from you.`);
-        }
-        const regionRoles = msg.member.roles.filter(r => this.regions.includes(r.id));
-        if (regionRoles.size > 1) throw "You can not have more than one region role.";
-        if (!msg.member.roles.has("226735941069307906")) await msg.member.roles.add("226735941069307906");
-        await msg.member.roles.add(role.id);
-        return msg.send(`Successfully added ${role.name} role to you.`);
+        if (role.id === "226735941069307906") throw "You cannot remove DaPlaya";
+        if (!msg.member.roles.has(role.id)) throw "You do not have this role.";
+        await msg.member.roles.remove(role.id);
+        return msg.send(`Sucessfully removed ${role.name} from you.`);
     }
 
     getRole(str) {
