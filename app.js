@@ -20,7 +20,7 @@ class ByzaClient extends Client {
         /* eslint-enable */
         this.tweetHook = new WebhookClient(config.webhook.id, config.webhook.token, { disableEveryone: true });
 
-        this.twitter.stream("statuses/filter", { follow: ["3801387378", "60194851", "2732818747", "703370607119839232"] })
+        this.twitter.stream("statuses/filter", { follow: ["60194851", "2732818747", "703370607119839232"] })
             .on("tweet", tweet => {
                 if (tweet.retweeted ||
                     tweet.retweeted_status ||

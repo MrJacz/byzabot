@@ -59,6 +59,6 @@ typings/
 
 # Custom
 config.json
-src/bwd
+src/bwd/provider
 package-lock.json
 
