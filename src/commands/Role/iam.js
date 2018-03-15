@@ -33,7 +33,7 @@ module.exports = class extends Command {
             return msg.send(`Sucessfully removed ${role.name} from you.`);
         }
         const regionRoles = msg.member.roles.filter(r => this.regions.includes(r.id));
-        if (regionRoles.size > 1) throw "You can not have more than one region role.";
+        if (regionRoles.size > 1 && role.type === "region") throw "You can not have more than one region role.";
         if (!msg.member.roles.has("226735941069307906")) await msg.member.roles.add("226735941069307906");
         await msg.member.roles.add(role.id);
         return msg.send(`Successfully added ${role.name} role to you.`);
