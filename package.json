@@ -13,11 +13,8 @@
   },
   "keywords": [
     "Discord",
-    "Discord",
     "Bot",
-    "Discord.js",
-    "Discord.js",
-    "bot"
+    "Discord.js"
   ],
   "author": "Jacz <jacz@jaczaus.me> (jaczaus.me)",
   "license": "MIT",
@@ -31,8 +28,8 @@
     "twit": "^2.2.9"
   },
   "devDependencies": {
-    "eslint": "^4.18.1",
+    "eslint": "^4.19.1",
     "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.6.0"
+    "eslint-plugin-promise": "^3.7.0"
   }
 }
