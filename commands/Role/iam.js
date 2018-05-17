@@ -35,7 +35,7 @@ module.exports = class extends Command {
 
     async addRole(msg, role) {
         const regionRoles = msg.member.roles.filter(r => this.regions.includes(r.id));
-        if (regionRoles.size > 1) throw "You can not have more than one region role.";
+        if (regionRoles.size > 1 && role.type === "region") throw "You can not have more than one region role.";
         await msg.member.roles.add(role.id);
         return msg.send(`Successfully added ${role.name} role to you.`);
     }
