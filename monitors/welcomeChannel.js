@@ -15,7 +15,7 @@ module.exports = class extends Monitor {
     async run(msg) {
         if (msg.channel.id !== "413270034987614229") return;
         await sleep(5000);
-        await msg.delete({ timeout: 5000 }).catch(error => {
+        await msg.delete().catch(error => {
             if (error instanceof DiscordAPIError) {
                 Error.captureStackTrace(error);
                 this.client.console.warn(`[API ERROR]: [CODE: ${error.code}] [METHOD: ${error.method}] [PATH: ${error.path}]\n${error.message}`);
